@@ -1,3 +1,5 @@
+Companion to the API Example, in this project we write the Angular code which fetches API from visual Code
+
 # ConsumeAPIInAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
