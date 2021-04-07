@@ -33,8 +33,10 @@
     </div>
     <div>
         <label>Enter ProjId : </label>
-        <input type="text" name="pid" [(ngModel)]="model.pid"
-        #pid="ngModel" required/>
+        <select name="pid" [(ngModel)]="model.pid"
+        #pid="ngModel" required>
+        <option *ngFor="let item of plist" [value]="item.projid">{{item.projname}}</option>
+        </select>
         <span *ngIf="pid.errors?.required">Proj Id has to be entered</span>
     </div>
     <div>

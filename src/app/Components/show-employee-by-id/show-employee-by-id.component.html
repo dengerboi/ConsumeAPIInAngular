@@ -1,12 +1,29 @@
-<h2>Show Employee By EmpID</h2>
-<form #Showform="ngForm" name="Showform" (ngSubmit)="ShowDataById(Showform)">
+<h2>Show Employee by ID</h2>
+<form #idform="ngForm" name="idform" (ngSubmit)="EmpData(idform)">
+    <div>Employee ID</div>
+        <input type="text" name="eid" [(ngModel)]="model.eid" #eid="ngModel" required><br><br>
+        <span *ngIf="eid.errors?.required" style="color: red;">Employee ID cannot be blank</span>
     <div>
-        <label>Enter Id : </label>
-        <input type="number" name="id" [(ngModel)]="model.id"
-        #id="ngModel" required/>
-        <span *ngIf="id.errors?.required">ID has to be entered</span>
-    </div>
-    <div>
-        <button type="submit" [disabled]="Showform.invalid">Display Employee</button>
+        <br>
+        <button type="submit" [disabled]="idform.invalid">Select By ID</button>
     </div>
 </form>
+<br>
+<table border="1">
+    <tr>
+        <th>Emp ID</th>                
+        <th>Name</th>         
+        <th>Dept</th>     
+        <th>Desg</th>     
+        <th>Salary</th>
+        <th>ProjID</th>                 
+        </tr>
+     <tr>
+         <td>{{employeeid}}</td>
+         <td>{{empname}}</td>
+         <td>{{dept}}</td>
+         <td>{{desg}}</td>
+         <td>{{salary}}</td>
+         <td>{{projid}}</td>
+     </tr>
+</table>

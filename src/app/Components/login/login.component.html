@@ -1,0 +1,22 @@
+<h2>Login</h2>
+<form #empForm="ngForm" name="empForm" (ngSubmit)="Login(empForm)">
+
+
+    <div>
+        <label>Enter UserName : </label>
+        <input type="text" name="name" [(ngModel)]="model.name"
+        #name="ngModel" required/>
+        <span *ngIf="name.errors?.required">Name has to be entered</span>
+        <br>
+    </div>
+
+    <div>
+        <label>Enter Password : </label>
+        <input type="password" name="pwd" [(ngModel)]="model.pwd"
+        #pwd="ngModel" required/>
+        <span *ngIf="pwd.errors?.required">Password has to be entered</span>
+    </div>
+
+    <div >
+        <button type="submit" [disabled]="empForm.invalid">Login</button>
+    </div>
