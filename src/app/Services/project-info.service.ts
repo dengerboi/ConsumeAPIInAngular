@@ -23,7 +23,7 @@ export class ProjectInfoService {
   }
   UpdateProject(pid : number, pinfo : ProjInfoModule) : Observable <boolean>
   {
-    return this.http.put<boolean>(this.url + '/UpdateProject/' + pid,pinfo);
+    return this.http.put<boolean>(this.url + '/UpdateProject/' + pid,pinfo,this.httpOptions);
   }
   GetProjById(id : number) : Observable<ProjInfoModule>{
     return this.http.get<ProjInfoModule>(this.url + '/SelectProjByID/' + id);
