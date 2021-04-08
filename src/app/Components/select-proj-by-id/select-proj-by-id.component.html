@@ -1,0 +1,23 @@
+<h2>Show Porject by ID</h2>
+<form #idform="ngForm" name="idform" (ngSubmit)="PrjData(idform)">
+    <div>Porject ID ID</div>
+        <input type="text" name="eid" [(ngModel)]="model.eid" #eid="ngModel" required><br><br>
+        <span *ngIf="eid.errors?.required" style="color: pink;">Project ID cannot be blank</span>
+    <div>
+        <br>
+        <button type="submit" [disabled]="idform.invalid">Select Project By ID</button>
+    </div>
+</form>
+<br>
+<table border="1">
+    <tr>
+        <th>Project ID</th>                
+        <th>Project Name</th>         
+        <th>Domain</th>                     
+        </tr>
+     <tr>
+         <td>{{projid}}</td>
+         <td>{{projname}}</td>
+         <td>{{domain}}</td>
+     </tr>
+</table>
