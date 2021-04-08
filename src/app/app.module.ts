@@ -11,6 +11,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { DeleteComponent } from './Components/delete/delete.component';
 import { SelectProjByIDComponent } from './Components/select-proj-by-id/select-proj-by-id.component';
 import { UpdateProjectComponent } from './Components/update-project/update-project.component';
+import { UpdateEmployeeComponent } from './Components/update-employee/update-employee.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UpdateProjectComponent } from './Components/update-project/update-proje
     LoginComponent,
     DeleteComponent,
     SelectProjByIDComponent,
-    UpdateProjectComponent
+    UpdateProjectComponent,
+    UpdateEmployeeComponent
   ],
   imports: [
     BrowserModule,

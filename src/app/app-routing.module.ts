@@ -7,6 +7,7 @@ import { LoginComponent} from './Components/login/login.component';
 import { DeleteComponent } from './Components/delete/delete.component';
 import { SelectProjByIDComponent } from './Components/select-proj-by-id/select-proj-by-id.component';
 import { UpdateProjectComponent } from './Components/update-project/update-project.component';
+import { UpdateEmployeeComponent } from './Components/update-employee/update-employee.component';
 const routes: Routes = [
   {path:'InsertEmployee',component:InsertEmployeeComponent},
   {path:'ShowAllEmployees',component:ShowAllEmployeesComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'Delete',component: DeleteComponent},
   {path: 'SelectProjByID', component: SelectProjByIDComponent},
   {path : 'UpdateProject', component: UpdateProjectComponent},
+  {path : 'UpdateEmployee', component: UpdateEmployeeComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
